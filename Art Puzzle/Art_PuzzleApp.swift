@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Art_PuzzleApp: App {
+    
+    @StateObject var vm = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+            //Injects viewmodel
+            .environmentObject(vm)
         }
     }
 }
